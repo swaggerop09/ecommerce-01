@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+          }
+          
+          .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+          }
+          
+          /* Clearfix (clear floats) */
+          .row{
+            content: "";
+            clear: both;
+            display: table;
+          }
+    </style>
+</head>
+<body>
+        {% for i in asap %}
+            <div class="column">
+                <!-- {{ i.image }} -->
+                <div class="row">
+                <h1>{{ i.name }}</h1><br>
+                {{ i.price }}$<br>
+                {{ i.des }}<br>
+                </div>
+            </div>
+        {% endfor %}
+</body>
+</html>
